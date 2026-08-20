@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reclamații Andreea</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <svg viewBox="0 0 320 140" role="img"
+           aria-label="Skoda Octavia neagră cu numărul âu âu âu">
+        <path d="M36 92v-6c0-5 5-9 13-11 19-24 49-33 104-36h61c24 1 41 11 55 28l19 5c8 2 12 6 12 13v7H36Z"
+              fill="#111" stroke="#444" stroke-width="2"/>
+        <path d="M98 44h53c21 0 40 3 55 9l18 14H87Z"
+              fill="#91a7ba"/>
+        <circle cx="92" cy="94" r="22" fill="#050505"/>
+        <circle cx="92" cy="94" r="10" fill="#888"/>
+        <circle cx="244" cy="94" r="22" fill="#050505"/>
+        <circle cx="244" cy="94" r="10" fill="#888"/>
+        <rect x="131" y="77" width="66" height="18" rx="4" fill="#fff"/>
+        <text x="164" y="90" text-anchor="middle"
+              font-size="13" font-family="Arial">âu âu âu</text>
+      </svg>
+
+      <div>
+        <small>GitHub Pages + GitHub Gist</small>
+        <h1>Reclamații Andreea</h1>
+        <p>Comentarii salvate prin GitHub Gist.</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button id="themeButton" type="button">Temă</button>
+      <button id="loginButton" type="button">Login admin</button>
+      <button id="logoutButton" type="button" hidden>Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Trimite o reclamație</h2>
+
+      <form id="commentForm">
+        <label>
+          Nume *
+          <input name="name" required>
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email">
+        </label>
+
+        <label>
+          Subiect *
+          <input name="subject" required>
+        </label>
+
+        <label>
+          Comentariu *
+          <textarea name="comment" required></textarea>
+        </label>
+
+        <button type="submit">Trimite comentariul</button>
+      </form>
+
+      <p id="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <div class="comments-heading">
+        <h2>Comentarii</h2>
+        <button id="refreshButton" type="button">Reîncarcă</button>
+      </div>
+
+      <div id="commentsList"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
 
